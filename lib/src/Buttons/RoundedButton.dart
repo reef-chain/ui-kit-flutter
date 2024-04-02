@@ -29,9 +29,7 @@ class RoundedButton extends StatelessWidget {
                         : Styles.secondaryAccentColor,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                   ),
-                  onPressed: () {
-                  
-                  },
+                  onPressed: onPressed,
                   child: Builder(builder: (context) {
                     return Text(
                       title,
