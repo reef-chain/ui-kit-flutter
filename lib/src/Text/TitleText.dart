@@ -3,11 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:reef_ui_kit/constants/styles.dart';
 
 class TitleText extends StatelessWidget {
-  const TitleText({super.key});
+  final String title;
+   const TitleText({required this.title, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Text("Title Text", style: GoogleFonts.poppins(
+    return Text(title, style: GoogleFonts.poppins(
         color: Colors.grey[800],
         fontSize: 32,
         fontWeight: FontWeight.w500,
