@@ -6,7 +6,8 @@ class GradientButton extends StatelessWidget {
   final String title;
   final VoidCallback? onPressed;
   final double width;
-  const GradientButton({required this.title, required this.onPressed,this.width=double.infinity, Key? key}) : super(key: key);
+  final bool isEnabled;
+  const GradientButton({required this.title, required this.onPressed,this.width=double.infinity,this.isEnabled = true, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,9 @@ class GradientButton extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
             shadowColor: const Color(0x559d6cff),
             elevation: 0,
-            backgroundColor: const Color(0xffe6e2f1),
+            backgroundColor: isEnabled
+                        ? const Color(0xffe6e2f1)
+                        : Colors.transparent,
             padding: const EdgeInsets.all(0),
           ),
           onPressed: onPressed,
@@ -27,7 +30,9 @@ class GradientButton extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 22),
             decoration: BoxDecoration(
               color: const Color(0xffe6e2f1),
-              gradient: Styles.buttonGradient,
+              gradient: isEnabled
+                          ? Styles.buttonGradient
+                          : null,
               borderRadius: const BorderRadius.all(Radius.circular(14.0)),
             ),
             child: Center(
@@ -36,7 +41,9 @@ class GradientButton extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
-                  color: Colors.white,
+                  color: !isEnabled
+                              ? const Color(0x65898e9c)
+                              : Colors.white,
                 ),
               ),
             ),
