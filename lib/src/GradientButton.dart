@@ -21,9 +21,7 @@ class GradientButton extends StatelessWidget {
             backgroundColor: const Color(0xffe6e2f1),
             padding: const EdgeInsets.all(0),
           ),
-          onPressed: () => {
-                //todo: anukulpandey
-              },
+          onPressed: onPressed,
           child: Ink(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 22),
