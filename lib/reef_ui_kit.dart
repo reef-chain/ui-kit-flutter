@@ -11,3 +11,4 @@ export 'package:reef_ui_kit/src/Modals/modal.dart';
 export 'package:reef_ui_kit/src/Inputs/InputField.dart';
 export 'package:reef_ui_kit/src/Inputs/CustomInput.dart';
 export 'package:reef_ui_kit/src/Inputs/PlainInputField.dart';
+export 'package:reef_ui_kit/src/Header/Header.dart';
