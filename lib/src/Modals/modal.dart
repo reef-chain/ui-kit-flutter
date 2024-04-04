@@ -131,13 +131,13 @@ class CustomModalState extends State<CustomModal>
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // const Padding(
-          //     padding: EdgeInsets.only(right: 8),
-          //     child:Image(
-          //       image: AssetImage("./assets/images/reef.png"),
-          //       width: 31,
-          //       height: 31,
-          //     )),
+          const Padding(
+              padding: EdgeInsets.only(right: 8),
+              child:Image(
+                image: AssetImage("assets/images/reef.png",package: 'reef_ui_kit'),
+                width: 31,
+                height: 31,
+              )),
           Expanded(
                   child: Text(
                     widget.headText,
